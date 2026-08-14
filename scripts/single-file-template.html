@@ -307,14 +307,21 @@ function buildNav() {
   const nav = document.getElementById('nav');
   let h = '';
   for (const g of DATA.groups) {
-    h += '<div class="nav-group" data-group="' + g.id + '">';
+    h += '<div class="nav-group" data-group="' + escapeHtml(g.id) + '">';
     h += '<div class="nav-group-title" onclick="toggleGroup(this)"><span class="arrow">▼</span>' + escapeHtml(g.label) + '</div>';
     for (const it of g.items) {
-      h += '<div class="nav-item" data-id="' + it.id + '" onclick="show(' + JSON.stringify(it.id) + ')">' + escapeHtml(it.title) + '</div>';
+      // data-id 用 encodeURIComponent 编码，彻底规避引号/特殊字符问题
+      const enc = encodeURIComponent(it.id);
+      h += '<div class="nav-item" data-id="' + enc + '">' + escapeHtml(it.title) + '</div>';
     }
     h += '</div>';
   }
   nav.innerHTML = h;
+  // 事件委托：避免内联 onclick 的引号嵌套问题
+  nav.addEventListener('click', function (e) {
+    const item = e.target.closest('.nav-item');
+    if (item) show(decodeURIComponent(item.dataset.id));
+  });
 }
 function toggleGroup(el) {
   el.parentElement.classList.toggle('collapsed');
@@ -330,7 +337,7 @@ function show(id) {
   }
   // 高亮当前项
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  const el = document.querySelector('.nav-item[data-id="' + id + '"]');
+  const el = [...document.querySelectorAll('.nav-item')].find(n => n.dataset.id === encodeURIComponent(id));
   if (el) el.classList.add('active');
   // 展开所属分组
   if (el) el.closest('.nav-group').classList.remove('collapsed');
