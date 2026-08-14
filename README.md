@@ -2,15 +2,11 @@
 
 基于 [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 仓库系统化拆解产物搭建的学习网站，面向想了解「AI Agent 框架如何工作」的开发者与爱好者。
 
-<p align="center">
-  <a href="https://Lucky2024-pllove.github.io/deepseek-harness-learning/">
-    <img src="https://img.shields.io/badge/🚀-开始学习-4e83fd?style=for-the-badge" alt="开始学习">
-  </a>
-</p>
+[![开始学习](https://img.shields.io/badge/-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0-4e83fd?style=for-the-badge&logo=github&logoColor=white)](https://lucky2024-pllove.github.io/deepseek-harness-learning/)
 
 > **不安装任何东西、点一下就能学 👆** —— 也可以 clone 后双击根目录 `index.html` 离线学习。
 
-- **GitHub 仓库**：https://github.com/Lucky2024-pllove/deepseek-harness-learning
+- **GitHub 仓库**：https://github.com/lucky2024-pllove/deepseek-harness-learning
 
 ## 内容一览
 
@@ -26,10 +22,10 @@
 
 ### 方式 A：在线版（推荐，图形化架构图）
 
-点下方按钮，或访问 GitHub Pages 网址：
+点上方按钮，或访问 GitHub Pages 网址（注意是小写 `lucky2024`）：
 
 ```
-https://Lucky2024-pllove.github.io/deepseek-harness-learning/
+https://lucky2024-pllove.github.io/deepseek-harness-learning/
 ```
 
 - ✅ 点开即看，无需下载，手机/电脑都能访问
@@ -110,7 +106,7 @@ node scripts/build-single-file.mjs
 1. 将本仓库推到 GitHub `main` 分支（已完成）
 2. 打开仓库 **Settings → Pages**，将 **Source** 设为 **GitHub Actions**（关键一步！）
 3. 回到仓库 **Actions** 页，确认 `Deploy VitePress site to Pages` 工作流跑完且显示绿色 ✓
-4. 等 1~2 分钟，访问 `https://Lucky2024-pllove.github.io/deepseek-harness-learning/`
+4. 等 1~2 分钟，访问 `https://lucky2024-pllove.github.io/deepseek-harness-learning/`
 
 > 如果 Actions 里看不到工作流或之前失败过：先在 Settings → Pages 完成第 2 步，再回到 Actions 页对工作流点 **Re-run all jobs** 重新运行。
 
