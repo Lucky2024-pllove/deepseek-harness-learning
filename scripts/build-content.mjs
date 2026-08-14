@@ -140,15 +140,51 @@ const MODULES = [
 
 const PROMPTS_SRC = join(SRC, 'translated_prompts')
 
-// 从翻译文档首行提取标题（形如 "# 提示词翻译文档：xxx" 或 "# 提示词翻译文档"）
+// 从翻译文档提取有辨识度的标题
+// 优先级：① section name / 变量名 → ② 首行"提示词翻译文档：xxx" → ③ 文件名"最后一段" → ④ 功能模块
 function extractTitle(filePath) {
   const raw = readFileSync(filePath, 'utf8')
-  const firstLine = raw.split('\n')[0] ?? ''
+  const lines = raw.split('\n')
+  const fname = filePath.split(/[\\/]/).pop() ?? ''
+  // ① 元信息 - 变量名称（优先 section name）
+  const varLine = lines.find(l => /^-\s*变量名称/.test(l.trim()))
+  if (varLine) {
+    const sn = varLine.match(/section\s*(?:name|名)\s*为\s*`?([A-Za-z][A-Za-z0-9_:.-]{0,50})`?/)
+    if (sn && !/ctx\.|\{\.\.\.\}/.test(sn[1])) return sn[1].trim()
+    const fn = varLine.match(/`([A-Za-z_][A-Za-z0-9_]{2,50})\(/)
+    if (fn) return fn[1].trim()
+    const vm = varLine.match(/`([A-Za-z_][A-Za-z0-9_]{2,50})`/)
+    if (vm && !/^无/.test(varLine.trim())) {
+      // 变量名后的语言风味说明（如 `SDK_INSTRUCTIONS`（TypeScript 风味））追加为后缀
+      const flavor = varLine.match(/（([A-Za-z]+) 风味）|\(([A-Za-z]+) flavor\)/)
+      const lang = flavor ? (flavor[1] ?? flavor[2]) : ''
+      if (lang && /^(TypeScript|Python|TS|PY)$/i.test(lang)) return vm[1] + ' (' + lang + ')'
+      return vm[1].trim()
+    }
+  }
+  // ② 首行"提示词翻译文档：xxx"
+  const firstLine = lines[0] ?? ''
   const m = firstLine.match(/^#\s*提示词翻译文档[：:]\s*(.+)$/)
   if (m) return m[1].trim()
-  // 无具体标题时，从文件名提取（去掉 _prompt_zh.md 后缀，用可读形式）
-  const base = filePath.split(/[\\/]/).pop().replace(/_prompt_zh\.md$/, '')
-  return base.replace(/_/g, ' ')
+  // ③ 文件名最后一段（如 tool-pty、time-context、goal-round-prompt）
+  const base = fname.replace(/_prompt_zh\.md$/, '')
+  const segs = base.split('_').filter(s => !/^(core|shell|fs|web|context|session|goal|guard|workflow|subagent|skill|interaction|sandbox|plan|todo|jobs|lsp|terminal|compaction|extensions|bundle|boot|client|schedule|session-query|hooks|docs|i18n)$/.test(s))
+  if (segs.length >= 1) {
+    let t = segs[segs.length - 1].replace(/-/g, ' ').replace(/^tool /, 'tool:')
+    // SDK_INSTRUCTIONS 的 TS/Py 变体加语言后缀区分
+    if (/sdk-instructions-(ts|py)/.test(base)) {
+      const lang = /sdk-instructions-(ts|py)/.exec(base)[1].toUpperCase()
+      t = 'SDK_INSTRUCTIONS (' + lang + ')'
+    }
+    return t
+  }
+  // ④ 功能模块
+  const modLine = lines.find(l => /^-\s*功能模块/.test(l.trim()))
+  if (modLine) {
+    const mm = modLine.match(/`([A-Za-z][A-Za-z0-9_:.-]{0,40})`/)
+    if (mm && !/ctx\.|systemPrompt|\.\.\./.test(mm[1])) return mm[1].trim()
+  }
+  return '未命名'
 }
 
 function ensureDir(p) {
