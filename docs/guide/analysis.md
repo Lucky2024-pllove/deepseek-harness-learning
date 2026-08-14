@@ -1,7 +1,6 @@
 # DeepSeek Harness (dsh) 大模型应用分析报告
 
 > 项目来源：https://github.com/deepseek-ai/deepseek-harness
-> 分析日期：2026-08-14
 > 项目类型：多智能体框架 / AI Agent 平台
 
 ---

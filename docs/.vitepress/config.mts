@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import promptsSidebar from './prompts-sidebar.mjs'
 
-// GitHub Pages 部署时需设置 base 为仓库名，例如 '/deepseek-harness-learning-site/'
+// GitHub Pages 部署时需设置 base 为仓库名，例如 '/deepseek-harness-learning/'
 // 本地预览时保持 '/'。构建脚本会通过环境变量注入。
 const base = process.env.VITEPRESS_BASE ?? '/'
 

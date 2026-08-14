@@ -226,9 +226,11 @@ function cleanPromptTitle(md) {
 // 1. 复制技术分析报告与产品说明书
 ensureDir(join(DOCS, 'guide'))
 const analysis = rewriteLinks(readFileSync(join(SRC, 'AI_MODEL_USAGE_ANALYSIS.md'), 'utf8'))
+  // 去掉"分析日期"行（用户要求不显示日期）
+  .replace(/^> 分析日期[：:][^\n]*\n+/m, '')
 writeFileSync(join(DOCS, 'guide', 'analysis.md'), analysis, 'utf8')
 copyFileSync(join(SRC, 'PRODUCT_GUIDE.md'), join(DOCS, 'guide', 'product-guide.md'))
-console.log('[ok] 复制 guide/analysis.md（已重写提示词链接）与 guide/product-guide.md')
+console.log('[ok] 复制 guide/analysis.md（已重写提示词链接、去掉日期）与 guide/product-guide.md')
 
 // 2. 复制提示词翻译文档并按模块分组
 const sidebar = []
