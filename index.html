@@ -341,15 +341,92 @@ function renderHome() {
   const c = document.getElementById('content');
   c.innerHTML = `
     <div class="hero">
-      <div class="badge">项目拆解学习站 · 2026-08-14</div>
       <h1>DeepSeek Harness</h1>
       <div class="subtitle">一个"一切皆插件"的 AI Agent 框架<br>76 个提示词 · 11 个技能 · 深度架构分析</div>
+    </div>
+    <div style="text-align:center;margin:8px 0 32px;">
+      <svg viewBox="0 0 720 130" width="720" style="max-width:100%;height:auto;">
+        <!-- 核心 -->
+        <rect x="300" y="25" width="120" height="80" rx="12" fill="#4e83fd"/>
+        <text x="360" y="58" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">核心 Harness</text>
+        <text x="360" y="80" text-anchor="middle" fill="#dbe6ff" font-size="11">agent-loop · system-prompt</text>
+        <text x="360" y="96" text-anchor="middle" fill="#dbe6ff" font-size="11">llm · tools · session</text>
+        <!-- 插件插槽 -->
+        <rect x="20" y="40" width="120" height="50" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="80" y="62" text-anchor="middle" fill="#4e83fd" font-size="11">插件插槽</text>
+        <text x="80" y="78" text-anchor="middle" fill="#8b9ec4" font-size="10">fs / shell / web</text>
+        <rect x="160" y="40" width="120" height="50" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="220" y="62" text-anchor="middle" fill="#4e83fd" font-size="11">插件插槽</text>
+        <text x="220" y="78" text-anchor="middle" fill="#8b9ec4" font-size="10">subagent / workflow</text>
+        <rect x="440" y="40" width="120" height="50" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="500" y="62" text-anchor="middle" fill="#4e83fd" font-size="11">插件插槽</text>
+        <text x="500" y="78" text-anchor="middle" fill="#8b9ec4" font-size="10">skill / compaction</text>
+        <rect x="580" y="40" width="120" height="50" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="640" y="62" text-anchor="middle" fill="#4e83fd" font-size="11">插件插槽</text>
+        <text x="640" y="78" text-anchor="middle" fill="#8b9ec4" font-size="10">goal / ralph / …</text>
+        <!-- 连线 -->
+        <line x1="140" y1="65" x2="300" y2="65" stroke="#4e83fd" stroke-width="2"/>
+        <line x1="280" y1="65" x2="300" y2="65" stroke="#4e83fd" stroke-width="2"/>
+        <line x1="420" y1="65" x2="440" y2="65" stroke="#4e83fd" stroke-width="2"/>
+        <line x1="560" y1="65" x2="580" y2="65" stroke="#4e83fd" stroke-width="2"/>
+      </svg>
+      <div style="font-size:12px;color:#8b9ec4;">一切皆插件：核心提供装配骨架，能力以插件形式按需挂载</div>
     </div>
     <div class="hero-cards">
       <div class="card" onclick="show('analysis')"><div class="icon">📊</div><div class="title">技术分析报告</div><div class="desc">8 章深度分析：架构与数据流、提示词分类、LLM 应用场景、工具清单、上下文工程</div></div>
       <div class="card" onclick="show('product-guide')"><div class="icon">📖</div><div class="title">产品说明书</div><div class="desc">12 章面向非技术用户的使用指南</div></div>
       <div class="card" onclick="jumpFirstPrompt()"><div class="icon">🧩</div><div class="title">提示词中英对照库</div><div class="desc">76 个模型可见提示词，按 9 大模块分类</div></div>
       <div class="card" onclick="show('analysis')"><div class="icon">🤖</div><div class="title">多智能体架构</div><div class="desc">subagent 委托、workflow 编排、goal 循环、Ralph 迭代</div></div>
+    </div>
+    <h2 style="margin-top:48px;">整个系统流程图</h2>
+    <p style="color:var(--muted);font-size:13px;">DeepSeek Harness 的系统数据流 —— 从用户输入到模型响应、再到工具执行的完整回路。</p>
+    <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px;overflow-x:auto;">
+      <svg viewBox="0 0 760 620" width="760" style="max-width:100%;height:auto;font-family:'SFMono-Regular',Consolas,monospace;">
+        <!-- 用户输入 -->
+        <rect x="300" y="10" width="160" height="46" rx="8" fill="#eef3ff" stroke="#4e83fd" stroke-width="1.5"/>
+        <text x="380" y="38" text-anchor="middle" fill="#1f2329" font-size="13">用户输入</text>
+        <line x1="380" y1="56" x2="380" y2="86" stroke="#4e83fd" stroke-width="2"/>
+        <polygon points="375,82 385,82 380,92" fill="#4e83fd"/>
+        <!-- agent-loop -->
+        <rect x="290" y="92" width="180" height="46" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5"/>
+        <text x="380" y="120" text-anchor="middle" fill="#1f2329" font-size="13">agent-loop</text>
+        <line x1="380" y1="138" x2="380" y2="168" stroke="#4e83fd" stroke-width="2"/>
+        <polygon points="375,164 385,164 380,174" fill="#4e83fd"/>
+        <!-- system-prompt 组装 -->
+        <rect x="290" y="174" width="180" height="46" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5"/>
+        <text x="380" y="202" text-anchor="middle" fill="#1f2329" font-size="13">system-prompt 组装</text>
+        <line x1="380" y1="220" x2="380" y2="250" stroke="#4e83fd" stroke-width="2"/>
+        <polygon points="375,246 385,246 380,256" fill="#4e83fd"/>
+        <!-- llm.stream -->
+        <rect x="290" y="256" width="180" height="46" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5"/>
+        <text x="380" y="284" text-anchor="middle" fill="#1f2329" font-size="13">llm.stream 模型调用</text>
+        <!-- 决策菱形 -->
+        <polygon points="380,340 440,382 380,424 320,382" fill="#fff" stroke="#4e83fd" stroke-width="1.5"/>
+        <text x="380" y="386" text-anchor="middle" fill="#1f2329" font-size="12">模型响应</text>
+        <!-- 工具分支 -->
+        <line x1="440" y1="382" x2="600" y2="382" stroke="#4e83fd" stroke-width="2"/>
+        <polygon points="596,378 606,382 596,386" fill="#4e83fd"/>
+        <text x="520" y="372" text-anchor="middle" fill="#4e83fd" font-size="11">工具调用</text>
+        <rect x="606" y="356" width="140" height="50" rx="8" fill="#fff" stroke="#4e83fd" stroke-width="1.5"/>
+        <text x="676" y="382" text-anchor="middle" fill="#1f2329" font-size="13">工具执行</text>
+        <line x1="676" y1="406" x2="676" y2="452" stroke="#4e83fd" stroke-width="2"/>
+        <polygon points="671,448 681,448 676,458" fill="#4e83fd"/>
+        <text x="688" y="440" text-anchor="middle" fill="#4e83fd" font-size="11">结果回填</text>
+        <line x1="676" y1="458" x2="676" y2="520" stroke="#4e83fd" stroke-width="2"/>
+        <line x1="676" y1="520" x2="380" y2="520" stroke="#4e83fd" stroke-width="2"/>
+        <line x1="380" y1="520" x2="380" y2="302" stroke="#4e83fd" stroke-width="2"/>
+        <polygon points="375,298 385,298 380,308" fill="#4e83fd"/>
+        <text x="560" y="512" text-anchor="middle" fill="#8b9ec4" font-size="11">回到组装（多轮循环）</text>
+        <!-- 完成分支 -->
+        <line x1="380" y1="424" x2="380" y2="500" stroke="#4e83fd" stroke-width="2"/>
+        <line x1="380" y1="500" x2="180" y2="500" stroke="#4e83fd" stroke-width="2"/>
+        <text x="250" y="492" text-anchor="middle" fill="#4e83fd" font-size="11">最终文本</text>
+        <polygon points="184,496 194,500 184,504" fill="#4e83fd"/>
+        <rect x="100" y="474" width="80" height="50" rx="8" fill="#eef3ff" stroke="#4e83fd" stroke-width="1.5"/>
+        <text x="140" y="500" text-anchor="middle" fill="#1f2329" font-size="13">返回用户</text>
+        <!-- 底部说明 -->
+        <text x="380" y="600" text-anchor="middle" fill="#8b9ec4" font-size="11">LLM 驱动循环：模型决定调用哪个工具、根据工具结果决定继续或结束</text>
+      </svg>
     </div>
   `;
 }

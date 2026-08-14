@@ -94,7 +94,7 @@ export default withMermaid(
       ],
       footer: {
         message: '基于 deepseek-harness 仓库的系统化拆解生成',
-        copyright: 'MIT License · 分析日期 2026-08-14',
+        copyright: 'MIT License',
       },
     },
     // Mermaid 配置

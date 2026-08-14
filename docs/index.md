@@ -42,6 +42,40 @@ DeepSeek Harness（`dsh`）是 DeepSeek AI 开发的开源 Agent Harness，采�
 - 提示词工程特点：模块化 section 组装、动态上下文快照、KV 缓存对齐压缩
 :::
 
+## "一切皆插件"架构
+
+核心 Harness 提供装配骨架（agent-loop、system-prompt 组装、LLM 调用、会话管理），**能力全部以插件形式按需挂载**——文件系统、shell、子代理、工作流、技能、压缩等都是插件插槽上的一个模块。
+
+```mermaid
+graph LR
+    subgraph harness["核心 Harness（装配骨架）"]
+        loop["agent-loop 代理循环"]
+        sp["system-prompt 组装器"]
+        llm["llm 服务定义层"]
+        sess["session 会话"]
+    end
+    slot1["插件: fs/shell/web"] --- harness
+    slot2["插件: subagent/workflow"] --- harness
+    slot3["插件: skill/compaction"] --- harness
+    slot4["插件: goal/ralph/…"] --- harness
+```
+
+## 整个系统流程图
+
+从用户输入到模型响应、再到工具执行的完整回路。LLM 是循环的驱动者：它决定调用哪个工具、根据工具结果决定继续还是结束。
+
+```mermaid
+graph TD
+    A["用户输入"] --> B["agent-loop 组装请求"]
+    B --> C["system-prompt 渲染 section/context/tools"]
+    C --> D["llm.stream 流式调用"]
+    D --> E{"模型响应"}
+    E -->|"工具调用"| F["tools.execute 执行工具"]
+    F --> G["结果回填会话"]
+    G --> B
+    E -->|"最终文本"| H["返回用户"]
+```
+
 ## 学习路径建议
 
 1. **入门**：先读 [产品说明书](/guide/product-guide)，了解它能做什么、怎么跑起来
@@ -51,4 +85,4 @@ DeepSeek Harness（`dsh`）是 DeepSeek AI 开发的开源 Agent Harness，采�
 
 ## 内容来源
 
-本站内容由 `lark-project-archive` 技能对 [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 仓库的系统化拆解生成，分析日期 2026-08-14。
+本站内容由 `lark-project-archive` 技能对 [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 仓库的系统化拆解生成。
