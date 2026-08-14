@@ -2,6 +2,14 @@
 
 基于 [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 仓库系统化拆解产物搭建的学习网站，面向想了解「AI Agent 框架如何工作」的开发者与爱好者。
 
+<p align="center">
+  <a href="https://Lucky2024-pllove.github.io/deepseek-harness-learning/">
+    <img src="https://img.shields.io/badge/🚀-开始学习-4e83fd?style=for-the-badge" alt="开始学习">
+  </a>
+</p>
+
+> **不安装任何东西、点一下就能学 👆** —— 也可以 clone 后双击根目录 `index.html` 离线学习。
+
 - **GitHub 仓库**：https://github.com/Lucky2024-pllove/deepseek-harness-learning
 
 ## 内容一览
@@ -16,7 +24,20 @@
 
 这个网站有**两种打开方式**，任选其一即可，都**不需要安装任何东西**：
 
-### 方式 A：单文件版（最简单，双击即开）
+### 方式 A：在线版（推荐，图形化架构图）
+
+点下方按钮，或访问 GitHub Pages 网址：
+
+```
+https://Lucky2024-pllove.github.io/deepseek-harness-learning/
+```
+
+- ✅ 点开即看，无需下载，手机/电脑都能访问
+- ✅ 架构图渲染为可交互图形（Mermaid）
+- ✅ 内置中文全文搜索
+- ✅ 无需任何安装
+
+### 方式 B：单文件版（离线，双击即开）
 
 下载或 clone 本仓库后，**双击根目录的 `index.html`**，浏览器直接打开即可学习。
 
@@ -24,19 +45,8 @@
 - ✅ 内置搜索 + 分组导航 + Markdown 渲染
 - ⚠️ 架构图以代码块展示（不渲染为图形）
 
-### 方式 B：在线版（图形化架构图）
+> ⚠️ **如果在线版网址打不开（404）**，说明在线版**尚未部署成功**。原因与解决见下方「部署到 GitHub Pages」一节——通常是因为仓库的 **Settings → Pages → Source** 还没有设为 **GitHub Actions**，或部署后需要等 1~2 分钟。
 
-访问 GitHub Pages 网址：
-
-```
-https://Lucky2024-pllove.github.io/deepseek-harness-learning/
-```
-
-- ✅ 点开即看，无需下载
-- ✅ 架构图渲染为可交互图形（Mermaid）
-- ✅ 内置中文全文搜索
-
-> ⚠️ **如果这个网址打不开（404）**，说明在线版**尚未部署成功**。原因与解决见下方「部署到 GitHub Pages」一节——通常是因为仓库的 **Settings → Pages → Source** 还没有设为 **GitHub Actions**，或部署后需要等 1~2 分钟。
 
 ---
 
