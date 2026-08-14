@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/core/tools/src/ts-types.ts:250-259`
 - 变量名称: `SDK_INSTRUCTIONS`（TypeScript 风味）

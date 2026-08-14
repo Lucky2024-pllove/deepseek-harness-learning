@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/context/agent-instructions/src/render.ts:12-19`
 - 变量名称: `WORKSPACE_CONTEXT_INTRO`（12-14）、`REPLACEMENT_WORKSPACE_CONTEXT_INTRO`（15-16）、`EMPTY_REPLACEMENT_WORKSPACE_CONTEXT_INTRO`（17-18）、`COMPACT_WORKSPACE_CONTEXT_INTRO`（19）

@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/core/tools/src/py-types.ts:734-743`
 - 变量名称: `SDK_INSTRUCTIONS`（Python 风味）

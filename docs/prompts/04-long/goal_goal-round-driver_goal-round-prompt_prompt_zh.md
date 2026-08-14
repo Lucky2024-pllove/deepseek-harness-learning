@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/goal/goal-round-driver/src/prompt.ts:12-25`
 - 变量名称: `renderGoalRoundPrompt(goal: GoalView, round: number): ContentBlock[]`

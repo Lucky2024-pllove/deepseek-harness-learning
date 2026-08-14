@@ -1,5 +1,3 @@
-# 提示词翻译文档：structured_output 工具描述
-
 ## 元信息
 - 原文件位置: `packages/subagent/subagent-in-process-driver/src/structured.ts:64-72`
 - 变量名称: `schemaEntry.description`

@@ -1,5 +1,3 @@
-# 提示词翻译文档：workflow DESCRIPTION（工作流工具脚本规范）
-
 ## 元信息
 - 原文件位置: `packages/workflow/tool-workflow/src/index.ts:138-150`
 - 变量名称: `DESCRIPTION`

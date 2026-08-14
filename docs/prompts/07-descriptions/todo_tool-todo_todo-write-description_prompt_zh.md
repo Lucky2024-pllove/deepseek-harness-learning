@@ -1,5 +1,3 @@
-# 提示词翻译文档：todo_write 工具描述
-
 ## 元信息
 - 原文件位置: `packages/todo/tool-todo/src/index.ts:45-78`
 - 变量名称: `DESCRIPTION_HEAD` + `DESCRIPTION_PARALLEL`/`DESCRIPTION_SINGLE` + `DESCRIPTION_TAIL`（由 `describe()` 拼接）

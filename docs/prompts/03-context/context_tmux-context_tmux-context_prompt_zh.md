@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/context/tmux-context/src/index.ts:162-173`（`renderState` 第 162-168 行，`renderReading` 第 171-173 行，`READING_PREFIX` 第 73 行）
 - 变量名称: `renderReading(location, turn)` / `renderState(location)`（模板函数）+ 常量 `READING_PREFIX`

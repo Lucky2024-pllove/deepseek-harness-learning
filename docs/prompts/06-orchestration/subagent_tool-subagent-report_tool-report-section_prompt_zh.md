@@ -1,5 +1,3 @@
-# 提示词翻译文档：tool:report section（子代理报告指导）
-
 ## 元信息
 - 原文件位置: `packages/subagent/tool-subagent-report/src/index.ts:54-62`
 - 变量名称: `tool:report`（`childCtx.systemPrompt.section({ name: 'tool:report', order: REPORT_SECTION_ORDER, ... })` 注册）

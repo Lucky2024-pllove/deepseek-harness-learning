@@ -1,5 +1,3 @@
-# 提示词翻译文档：DELEGATED_CALLER_ERROR（子代理人类交互不可用错误）
-
 ## 元信息
 - 原文件位置: `packages/interaction/user-questions/src/index.ts:107-111`
 - 变量名称: 内联错误文本（`UserQuestionError` 构造）

@@ -1,5 +1,3 @@
-# 提示词翻译文档：web-surface（Web GUI 交互界面提示词）
-
 ## 元信息
 - 原文件位置: `packages/bundle/web-app/src/index.ts:95-106`（`webSurfacePrompt` 函数）
 - 变量名称: `webSurfacePrompt`（函数名）；对应 section 名为 `app:web-surface`（`index.ts:144`）

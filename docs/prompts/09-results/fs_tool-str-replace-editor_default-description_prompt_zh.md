@@ -1,5 +1,3 @@
-# 提示词翻译文档：str_replace_editor 默认描述
-
 ## 元信息
 - 原文件位置: `packages/fs/tool-str-replace-editor/src/index.ts:19-30`
 - 变量名称: `DEFAULT_DESCRIPTION`

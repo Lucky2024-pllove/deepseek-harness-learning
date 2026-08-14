@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/client/ui-deliverables/src/index.ts:15-16`（注册处：第 22-27 行）
 - 变量名称: `FILE_REFERENCE_PROMPT`

@@ -1,5 +1,3 @@
-# 提示词翻译文档：renderSkillContent（技能内容框架）
-
 ## 元信息
 - 原文件位置: `packages/skill/skill/src/index.ts:171-184`
 - 变量名称: `renderSkillContent(skill)`

@@ -1,5 +1,3 @@
-# 提示词翻译文档：持久 bash 工具描述与结果消息
-
 ## 元信息
 - 原文件位置: `packages/shell/tool-bash-persistent/src/index.ts:15-17, 25`
 - 变量名称: `TRUNCATED_MESSAGE`（15）、`LOST_PREFIX_MESSAGE`（16）、`SHELL_RESET_MESSAGE`（17）、`DEFAULT_DESCRIPTION`（25）

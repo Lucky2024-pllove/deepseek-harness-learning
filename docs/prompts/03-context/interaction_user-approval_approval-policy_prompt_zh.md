@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/interaction/user-approval/src/index.ts:100-102`
 - 变量名称: `NEVER_SENTENCE`（第 100 行）、`ASK_SENTENCE`（第 102 行）

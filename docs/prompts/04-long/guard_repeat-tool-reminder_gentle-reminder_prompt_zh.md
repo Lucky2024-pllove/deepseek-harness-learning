@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/guard/repeat-tool-reminder/src/index.ts:63-67`
 - 变量名称: `GENTLE_REMINDER`

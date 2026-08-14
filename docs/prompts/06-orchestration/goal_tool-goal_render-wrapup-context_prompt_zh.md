@@ -1,5 +1,3 @@
-# 提示词翻译文档：renderWrapupContext（目标收尾指令）
-
 ## 元信息
 - 原文件位置: `packages/goal/tool-goal/src/wrapup.ts:17-40`
 - 变量名称: `renderWrapupContext(objective, blockedReason?)`

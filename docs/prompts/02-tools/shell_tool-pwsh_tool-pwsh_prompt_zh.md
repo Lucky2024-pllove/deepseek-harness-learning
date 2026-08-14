@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/shell/tool-pwsh/src/index.ts:245-250`
 - 变量名称: 无（`ctx.systemPrompt.section({...})` 内联文本，section name 为 `tool:pwsh`）

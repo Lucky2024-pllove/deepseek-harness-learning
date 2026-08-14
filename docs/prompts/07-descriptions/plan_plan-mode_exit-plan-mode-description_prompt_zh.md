@@ -1,5 +1,3 @@
-# 提示词翻译文档：EXIT_DESCRIPTION（exit_plan_mode 工具描述）
-
 ## 元信息
 - 原文件位置: `packages/plan/plan-mode/src/index.ts:84-88`
 - 变量名称: `EXIT_DESCRIPTION`

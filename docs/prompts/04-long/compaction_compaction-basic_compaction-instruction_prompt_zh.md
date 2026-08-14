@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/compaction/compaction-basic/src/summarizer.ts:31-66`
 - 变量名称: `COMPACTION_INSTRUCTION`

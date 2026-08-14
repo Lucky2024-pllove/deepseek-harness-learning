@@ -1,5 +1,3 @@
-# 提示词翻译文档：PROMPT_TEXT（会话查询工具指导）
-
 ## 元信息
 - 原文件位置: `packages/session-query/tool-session-query/src/index.ts:52-55`
 - 变量名称: `PROMPT_TEXT`

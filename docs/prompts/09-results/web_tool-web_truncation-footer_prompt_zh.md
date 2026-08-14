@@ -1,5 +1,3 @@
-# 提示词翻译文档：web_fetch 截断页脚
-
 ## 元信息
 - 原文件位置: `packages/web/tool-web/src/fetch.ts:247`
 - 变量名称: `TRUNCATION_FOOTER`

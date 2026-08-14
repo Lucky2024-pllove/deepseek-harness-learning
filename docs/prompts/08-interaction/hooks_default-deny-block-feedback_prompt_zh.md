@@ -1,5 +1,3 @@
-# 提示词翻译文档：hooks 默认 deny/block 反馈（Claude Code + Codex）
-
 ## 元信息
 - 原文件位置:
   - `packages/hooks/hooks-claude-code/src/index.ts:241,252,274`

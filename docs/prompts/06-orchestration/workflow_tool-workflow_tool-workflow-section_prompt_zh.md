@@ -1,5 +1,3 @@
-# 提示词翻译文档：tool:workflow section（Workflow 工具使用政策）
-
 ## 元信息
 - 原文件位置: `packages/workflow/tool-workflow/src/index.ts:212-216`
 - 变量名称: `tool:workflow`（`ctx.systemPrompt.section({ name: `tool:${toolName}`, order: 115, ... })` 注册，toolName 默认 `workflow`）

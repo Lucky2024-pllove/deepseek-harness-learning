@@ -1,5 +1,3 @@
-# 提示词翻译文档：report 工具描述
-
 ## 元信息
 - 原文件位置: `packages/subagent/tool-subagent-report/src/index.ts:67-73`
 - 变量名称: `report` 工具的 `description`

@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/terminal/tool-terminal/src/index.ts:156-160`（section 文本在第 159 行）
 - 变量名称: `ctx.systemPrompt.section({ name: 'tool:pty', order: 106, text: ... })` 的 `text` 字段

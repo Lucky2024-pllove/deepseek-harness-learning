@@ -1,5 +1,3 @@
-# 提示词翻译文档：tool:subagent background section（子代理后台运行指导）
-
 ## 元信息
 - 原文件位置: `packages/subagent/tool-subagent/src/index.ts:459-465`
 - 变量名称: `tool:subagent`（`ctx.systemPrompt.section({ name: `tool:${toolName}`, order: SUBAGENT_SECTION_ORDER, ... })` 注册）

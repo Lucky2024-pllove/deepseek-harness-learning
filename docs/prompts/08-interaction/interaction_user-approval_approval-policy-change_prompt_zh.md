@@ -1,5 +1,3 @@
-# 提示词翻译文档：ApprovalPolicyChangeMessage（审批策略变更消息）
-
 ## 元信息
 - 原文件位置: `packages/interaction/user-approval/src/index.ts:230-236`
 - 变量名称: 内联模板（`setPolicy` 方法内）

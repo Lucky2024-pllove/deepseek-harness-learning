@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/web/tool-web/src/search.ts:216-222`
 - 变量名称: 无（`ctx.systemPrompt.section({...})` 内联文本，section name 为 `tool:web_search`；文本按 `fetchEnabled` 三元选择两个变体）

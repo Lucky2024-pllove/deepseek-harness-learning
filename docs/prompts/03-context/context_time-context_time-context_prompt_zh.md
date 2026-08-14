@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/context/time-context/src/index.ts:110-125`（模板字符串在第 122-124 行）
 - 变量名称: `renderText(now, turn, step, previous, formatter, timeZone, browserContext)`（模板函数）

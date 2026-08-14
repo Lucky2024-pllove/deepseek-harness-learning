@@ -1,5 +1,3 @@
-# 提示词翻译文档：harness:identity（Harness 身份声明）
-
 ## 元信息
 - 原文件位置: `packages/core/system-prompt/src/index.ts:357-363`（text 本体在第 361 行）
 - 变量名称: `harness:identity`（`SystemPrompt` 构造函数内 `this.section({ ... })` 注册的 section 名）

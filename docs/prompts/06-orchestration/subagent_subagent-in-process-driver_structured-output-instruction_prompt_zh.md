@@ -1,5 +1,3 @@
-# 提示词翻译文档：STRUCTURED_OUTPUT_INSTRUCTION（结构化输出指令）
-
 ## 元信息
 - 原文件位置: `packages/subagent/subagent-in-process-driver/src/structured.ts:26-29`
 - 变量名称: `STRUCTURED_OUTPUT_INSTRUCTION`

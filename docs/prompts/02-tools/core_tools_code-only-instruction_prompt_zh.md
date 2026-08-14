@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/core/tools/src/index.ts:58`（注册处：第 855-863 行 `collapseSection()`）
 - 变量名称: `CODE_ONLY_INSTRUCTION`

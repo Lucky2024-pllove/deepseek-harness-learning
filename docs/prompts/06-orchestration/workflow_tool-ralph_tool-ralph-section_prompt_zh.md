@@ -1,5 +1,3 @@
-# 提示词翻译文档：tool:ralph section（Ralph 工具使用政策）
-
 ## 元信息
 - 原文件位置: `packages/workflow/tool-ralph/src/index.ts:407-411`
 - 变量名称: `tool:ralph`（`ctx.systemPrompt.section({ name: 'tool:ralph', order: 116, ... })` 注册）

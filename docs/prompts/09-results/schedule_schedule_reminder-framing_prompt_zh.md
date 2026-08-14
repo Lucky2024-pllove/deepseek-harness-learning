@@ -1,5 +1,3 @@
-# 提示词翻译文档：schedule 定时提醒框架
-
 ## 元信息
 - 原文件位置: `packages/schedule/schedule/src/domain.ts:779-806`
 - 变量名称: `renderReminderFraming`（779）、`renderEveryReminderBatchFraming`（794）

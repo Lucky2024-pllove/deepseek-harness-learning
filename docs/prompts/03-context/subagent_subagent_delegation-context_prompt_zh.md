@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/subagent/subagent/src/child-agent.ts:135-139`
 - 变量名称: `SUBAGENT_DELEGATION_CONTEXT`

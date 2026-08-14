@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/skill/tool-skill/src/index.ts:254-311`
 - 变量名称: `renderCatalogMessage(entries)`（254-277）、`renderCatalogUpdate(entries)`（279-311）

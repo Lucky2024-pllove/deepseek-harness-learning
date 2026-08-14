@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/sandbox/sandbox-policy/src/index.ts:38-52`
 - 变量名称: `renderPolicyContext(policy: SandboxExecutionPolicy)`（内部函数，按 `policy.mode` 分支返回三个变体：`read-only` / `workspace-write` / `danger-full-access`）

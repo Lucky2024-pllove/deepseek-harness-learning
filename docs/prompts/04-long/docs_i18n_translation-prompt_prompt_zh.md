@@ -1,5 +1,3 @@
-# 提示词翻译文档：翻译流水线 Prompt 模板（translation-prompt.md）
-
 ## 元信息
 - 原文件位置: `docs/i18n/translation-prompt.md:34`（模板正文从 `# Translation Prompt` 开始）
 - 变量名称: 无固定常量名；模板正文 + 三个占位符 `{{source_lang}}` / `{{target_lang}}` / `{{terminology}}`

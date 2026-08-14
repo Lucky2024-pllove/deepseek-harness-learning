@@ -1,5 +1,3 @@
-# 提示词翻译文档：ABORTED_BEFORE_DISPATCH_RESULT（checkpoint 中止反馈）
-
 ## 元信息
 - 原文件位置: `packages/session/session-checkpoint-policy/src/index.ts:40-50`
 - 变量名称: `abortedBeforeDispatchResult()` 返回的文本

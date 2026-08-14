@@ -1,5 +1,3 @@
-# 提示词翻译文档：harness:source（Harness 源码检出位置声明）
-
 ## 元信息
 - 原文件位置: `packages/boot/app-boot/src/index.ts:821-829`（text 本体在第 827 行）
 - 变量名称: `harness:source`（`HARNESS_SOURCE_SECTION`，`index.ts:805`）

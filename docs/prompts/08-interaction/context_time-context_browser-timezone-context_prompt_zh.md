@@ -1,5 +1,3 @@
-# 提示词翻译文档：renderBrowserTimeZoneContext（浏览器时区上下文）
-
 ## 元信息
 - 原文件位置: `packages/context/time-context/src/request-zone.ts:66-81`
 - 变量名称: `renderBrowserTimeZoneContext(context)`

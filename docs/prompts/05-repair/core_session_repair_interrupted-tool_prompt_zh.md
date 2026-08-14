@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/core/session/src/repair.ts:103-105`
 - 变量名称: 内联于 `interruptedTurnClosers()` 的 `ToolResultMessage.content[].text`（按 `started` 布尔分支选择；无独立命名常量）

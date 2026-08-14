@@ -1,5 +1,3 @@
-# 提示词翻译文档：CREATE_DESCRIPTION（create_goal 工具描述）
-
 ## 元信息
 - 原文件位置: `packages/goal/tool-goal/src/index.ts:45-49`
 - 变量名称: `CREATE_DESCRIPTION`

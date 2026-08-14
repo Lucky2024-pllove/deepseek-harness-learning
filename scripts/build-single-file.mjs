@@ -85,7 +85,9 @@ for (const mod of MODULES) {
   for (const fname of readdirSync(dir)) {
     if (!fname.endsWith('.md')) continue
     const md = readFileSync(join(dir, fname), 'utf8')
-    items.push({ id: `${mod.id}:${fname}`, title: extractTitle(md, fname), md })
+    // 去掉首行 "# 提示词翻译文档（：xxx）"，正文从"元信息"开始（侧边栏已有标题）
+    const cleanMd = md.replace(/^#\s*提示词翻译文档[^\n]*\n+/, '')
+    items.push({ id: `${mod.id}:${fname}`, title: extractTitle(md, fname), md: cleanMd })
   }
   groups.push({ id: mod.id, label: mod.label, items })
 }

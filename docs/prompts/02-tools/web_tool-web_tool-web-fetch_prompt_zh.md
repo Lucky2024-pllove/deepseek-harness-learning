@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/web/tool-web/src/fetch.ts:430-434`
 - 变量名称: 无（`ctx.systemPrompt.section({...})` 内联文本，section name 为 `tool:web_fetch`）

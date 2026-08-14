@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/core/agent-loop/src/runtime-context.ts:13`
 - 变量名称: `CLEARED`

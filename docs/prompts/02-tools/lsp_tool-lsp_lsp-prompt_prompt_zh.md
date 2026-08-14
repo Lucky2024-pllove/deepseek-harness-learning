@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/lsp/tool-lsp/src/index.ts:54-55`（注册处：第 104 行）
 - 变量名称: `LSP_PROMPT_TEXT`

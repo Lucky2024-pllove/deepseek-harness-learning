@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/workflow/tool-ralph/src/index.ts:155-162`
 - 变量名称: `prompt`（`RALPH_SCRIPT` 内部，`String.raw` 模板中的 `prompt` 数组，`join('\n\n')` 后作为子代理提示词）

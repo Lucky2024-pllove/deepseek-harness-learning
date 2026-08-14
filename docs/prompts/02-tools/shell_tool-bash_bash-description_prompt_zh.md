@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/shell/tool-bash/src/index.ts:70-93`
 - 变量名称: `bashDescription(backgroundEnabled, escalationModes)`（模板函数，返回 `bash` 工具的 `description`）

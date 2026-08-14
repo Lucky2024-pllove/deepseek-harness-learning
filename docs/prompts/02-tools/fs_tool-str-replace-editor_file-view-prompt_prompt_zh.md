@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/fs/tool-str-replace-editor/src/index.ts:146`（前缀模板），`view_range` 后缀追加于第 177 行
 - 变量名称: `formatFileView(path, content, maxOutputChars, viewRange?)` 中的 `prompt` 模板

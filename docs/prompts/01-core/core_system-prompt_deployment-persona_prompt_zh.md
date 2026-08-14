@@ -1,5 +1,3 @@
-# 提示词翻译文档：deployment:persona（部署人格模板槽）
-
 ## 元信息
 - 原文件位置: `packages/core/system-prompt/src/index.ts:364-369`（注册代码）；语义契约 JSDoc 在 `index.ts:191-195`；常量定义在 `index.ts:128`（`PERSONA_SECTION`）与 `index.ts:131`（`PERSONA_ORDER`）
 - 变量名称: `deployment:persona`（`PERSONA_SECTION`，`SystemPrompt` 构造函数内注册的 section 名）

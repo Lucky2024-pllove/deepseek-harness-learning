@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/compaction/compaction-basic/src/summarizer.ts:69-70`
 - 变量名称: `CHECKPOINT_PREAMBLE`

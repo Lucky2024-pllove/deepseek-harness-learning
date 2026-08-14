@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/extensions/tool-cordis/src/prompt.ts:3-107`
 - 变量名称: `CORDIS_SYSTEM_PROMPT`（模板字符串常量，约 105 行）

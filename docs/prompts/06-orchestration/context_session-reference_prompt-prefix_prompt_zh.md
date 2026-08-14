@@ -1,5 +1,3 @@
-# 提示词翻译文档：PROMPT_PREFIX（引用会话安全边界）
-
 ## 元信息
 - 原文件位置: `packages/context/session-reference/src/index.ts:42-51`
 - 变量名称: `PROMPT_PREFIX` / `PROMPT_SUFFIX`

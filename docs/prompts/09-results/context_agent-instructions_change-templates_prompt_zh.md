@@ -1,5 +1,3 @@
-# 提示词翻译文档：agent-instructions 变更通知模板
-
 ## 元信息
 - 原文件位置: `packages/context/agent-instructions/src/render.ts:148-157, 171-184, 215-225`
 - 变量名称: `additionalSectionText`（148）、`changedSectionText`（171）、`markerText`（215）

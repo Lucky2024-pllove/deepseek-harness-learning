@@ -1,5 +1,3 @@
-# 提示词翻译文档：tool:goal section（Goal 工具使用政策）
-
 ## 元信息
 - 原文件位置: `packages/goal/tool-goal/src/index.ts:113-123`（`guidance()` 函数）
 - 变量名称: `tool:goal`（`ctx.systemPrompt.section({ name: 'tool:goal', order: 115, text: guidance(...) })` 注册）

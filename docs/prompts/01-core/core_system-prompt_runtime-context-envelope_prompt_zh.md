@@ -1,5 +1,3 @@
-# 提示词翻译文档：runtime-context 信封（运行时上下文快照声明）
-
 ## 元信息
 - 原文件位置: `packages/core/system-prompt/src/index.ts:236-240`（`joinContextSections` 函数的固定前缀）
 - 变量名称: 无命名常量；函数 `joinContextSections`，前缀文本即本提示词本体

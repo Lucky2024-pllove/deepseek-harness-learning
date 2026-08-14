@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/shell/tool-pwsh/src/index.ts:103-145`
 - 变量名称: `pwshDescription(backgroundEnabled, escalationModes)`（模板函数，返回 `pwsh` 工具的 `description`）

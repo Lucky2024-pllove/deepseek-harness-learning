@@ -1,5 +1,3 @@
-# 提示词翻译文档：ASK_USER_TOOL_DESCRIPTION（ask_user_question 工具描述）
-
 ## 元信息
 - 原文件位置: `packages/interaction/tool-ask-user/src/index.ts:16-17`
 - 变量名称: `description`（常量）

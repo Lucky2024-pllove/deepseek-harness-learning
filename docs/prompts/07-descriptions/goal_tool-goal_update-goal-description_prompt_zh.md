@@ -1,5 +1,3 @@
-# 提示词翻译文档：update_goal 工具描述
-
 ## 元信息
 - 原文件位置: `packages/goal/tool-goal/src/index.ts:236-239`
 - 变量名称: `update_goal` 工具的 `description`

@@ -217,6 +217,12 @@ function rewriteLinks(md) {
   return out
 }
 
+// 去掉提示词文档首行的 "# 提示词翻译文档（：xxx）"，让正文从"元信息"开始
+// （侧边栏已展示具体标题，正文无需重复显示该前缀）
+function cleanPromptTitle(md) {
+  return md.replace(/^#\s*提示词翻译文档[^\n]*\n+/, '')
+}
+
 // 1. 复制技术分析报告与产品说明书
 ensureDir(join(DOCS, 'guide'))
 const analysis = rewriteLinks(readFileSync(join(SRC, 'AI_MODEL_USAGE_ANALYSIS.md'), 'utf8'))
@@ -240,7 +246,8 @@ for (const mod of MODULES) {
     }
     const title = extractTitle(src)
     const dest = join(modDir, fname)
-    copyFileSync(src, dest)
+    const clean = cleanPromptTitle(readFileSync(src, 'utf8'))
+    writeFileSync(dest, clean, 'utf8')
     items.push({ text: title, link: `/prompts/${mod.id}/${fname.replace(/\.md$/, '')}` })
     totalFiles++
   }

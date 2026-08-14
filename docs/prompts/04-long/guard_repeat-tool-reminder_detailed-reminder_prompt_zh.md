@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/guard/repeat-tool-reminder/src/index.ts:70-79`
 - 变量名称: `detailedReminder(toolName, count, canonicalArguments)`（模板函数）

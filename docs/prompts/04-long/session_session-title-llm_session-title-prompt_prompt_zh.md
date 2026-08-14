@@ -1,5 +1,3 @@
-# 提示词翻译文档
-
 ## 元信息
 - 原文件位置: `packages/session/session-title-llm/src/index.ts:186-193`
 - 变量名称: `systemPrompt(config: ResolvedSessionTitleLlmConfig)`（内部函数，稳定、语言感知的系统指令）
