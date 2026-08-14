@@ -27,6 +27,23 @@ pnpm run docs:build
 pnpm run docs:preview
 ```
 
+## 单文件 HTML 版（零依赖、双击即开）
+
+仓库根目录的 `index.html` 是一个**自包含的单文件版**，clone 下来后**双击就能用浏览器打开**，不需要安装 Node/pnpm、不需要构建、不需要联网。
+
+- 适合技术小白：下载/clone 后双击 `index.html` 即可学习
+- 包含全部内容：技术报告、产品说明书、76 个提示词（中英对照）
+- 内置极简 Markdown 渲染 + 搜索 + 分组导航
+- 注意：单文件版中架构图以代码块形式展示（不渲染为图形）；如需图形化的 Mermaid 架构图，请访问 GitHub Pages 在线版
+
+重新生成单文件版：
+
+```sh
+node scripts/build-single-file.mjs
+```
+
+> 说明：`index.html` 是脚本生成的，修改内容后需重新运行上述命令。
+
 ## 内容来源
 
 内容由 `lark-project-archive` 技能拆解生成，源分析产物位于：
